@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .card-transition {
+        transition: all 0.8s ease-in-out;
+      }
+      .bg-welcome {
+        background-color: #ffb400;
+      }
+      .eye-icon {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-r from-orange-50 to-white flex items-center justify-center min-h-screen font-sans relative"
+  >
+    <!-- Back Arrow -->
+    <a
+      href="landing.html"
+      class="absolute top-5 left-5 text-2xl text-gray-600 hover:text-gray-800 transition"
+    >
+      &#8592; Back
+    </a>
+
+    <div class="w-full max-w-6xl flex justify-between space-x-10 p-10">
+      <!-- Form Card Left -->
+      <div
+        id="formCard"
+        class="flex-1 bg-white p-12 rounded-3xl shadow-xl card-transition flex flex-col justify-center"
+      >
+        <!-- Login Form -->
+        <form id="loginForm" class="space-y-5">
+          <h2 class="text-3xl font-bold text-gray-700 text-center mb-6">
+            Login
+          </h2>
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffb400]"
+          />
+
+          <div class="relative">
+            <input
+              type="password"
+              placeholder="Password"
+              id="loginPassword"
+              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffb400]"
+            />
+            <span
+              id="loginToggle"
+              class="absolute right-3 top-3 eye-icon text-gray-500"
+              >👁️</span
+            >
+          </div>
+
+          <button
+            class="w-full bg-[#ffb400] text-white py-3 rounded-lg hover:bg-[#e69e00] transition"
+          >
+            Login
+          </button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm" class="space-y-5 hidden">
+          <h2 class="text-3xl font-bold text-gray-700 text-center mb-6">
+            Register
+          </h2>
+          <input
+            type="text"
+            placeholder="Full Name"
+            class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffb400]"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffb400]"
+          />
+
+          <div class="relative">
+            <input
+              type="password"
+              placeholder="Password"
+              id="regPassword"
+              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffb400]"
+            />
+            <span
+              id="regToggle"
+              class="absolute right-3 top-3 eye-icon text-gray-500"
+              >👁️</span
+            >
+          </div>
+
+          <div class="relative">
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              id="regConfirmPassword"
+              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffb400]"
+            />
+            <span
+              id="confirmToggle"
+              class="absolute right-3 top-3 eye-icon text-gray-500"
+              >👁️</span
+            >
+          </div>
+
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffb400]"
+          />
+          <button
+            class="w-full bg-[#ffb400] text-white py-3 rounded-lg hover:bg-[#e69e00] transition"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+
+      <!-- Welcome Card Right -->
+      <div
+        id="welcomeCard"
+        class="flex-1 bg-welcome text-white p-12 rounded-3xl shadow-xl flex flex-col items-center justify-center card-transition"
+      >
+        <h2 id="welcomeTitle" class="text-4xl font-bold mb-4 text-center">
+          Welcome Back!
+        </h2>
+        <p id="welcomeText" class="text-center mb-6 text-lg">
+          Login to access your library account and explore thousands of books.
+        </p>
+        <button
+          id="switchBtn"
+          class="bg-white text-[#ffb400] font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition"
+        >
+          Register
+        </button>
+      </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+  </body>
+</html>
