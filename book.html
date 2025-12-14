@@ -1,11 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/book.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ===== SIDEBAR ===== -->
+    <div id="sidebar" class="sidebar">
+      <a href="#" class="close-btn" onclick="toggleSidebar()">&times;</a>
+
+      <h2>BookVerse</h2>
+
+      <ul id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#facts">Facts</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+        <!-- Dropdown Menu -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-btn">More ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="book.html">Books</a></li>
+          </ul>
+        </li>
+        <div class="social-icons">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <a href="auth.html" class="signin-link">Se connecter</a>
+      </ul>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="container">
+        <span class="menu-btn" onclick="toggleSidebar()">&#9776;</span>
+        <h1>BookVerse</h1>
+        <a href="auth.html">se connecter</a>
+      </div>
+    </header>
+
+    <!-- ===== BOOKS SECTION ===== -->
+    <section id="books" class="books-section">
+      <div class="container">
+        <h2>Our Collection</h2>
+
+        <!-- Books Grid -->
+        <div id="books-container" class="books-container">
+          <!-- Page 1 -->
+          <div class="books-page" data-page="1">
+            <!-- 10 books per page -->
+            <!-- Book 1 to 10 -->
+            <div class="book-card">
+              <img src="images/book1.jpg" alt="Book Image" />
+              <h3>Book Title 1</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$10</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book3.jpg" alt="Book Image" />
+              <h3>Book Title 2</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$15</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book4.jpg" alt="Book Image" />
+              <h3>Book Title 3</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$20</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book5.jpg" alt="Book Image" />
+              <h3>Book Title 4</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$25</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book6.png" alt="Book Image" />
+              <h3>Book Title 5</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$10</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+
+            <div class="book-card">
+              <img src="images/book7.jpg" alt="Book Image" />
+              <h3>Book Title 6</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$15</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book8.jpg" alt="Book Image" />
+              <h3>Book Title 7</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$20</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book9.jpg" alt="Book Image" />
+              <h3>Book Title 8</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$25</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book10.jpg" alt="Book Image" />
+              <h3>Book Title 9</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$10</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book11.jpg" alt="Book Image" />
+              <h3>Book Title 10</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$15</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+          </div>
+
+          <!-- Page 2 -->
+          <div class="books-page" data-page="2" >
+            <!-- Book 11 to 20 -->
+            <div class="book-card">
+              <img src="images/book12.jpg" alt="Book Image" />
+              <h3>Book Title 11</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$10</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book13.jpg" alt="Book Image" />
+              <h3>Book Title 12</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$15</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book14.png" alt="Book Image" />
+              <h3>Book Title 13</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$20</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book15.jpg" alt="Book Image" />
+              <h3>Book Title 14</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$25</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book16.jpg" alt="Book Image" />
+              <h3>Book Title 15</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$10</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+
+            <div class="book-card">
+              <img src="images/book17.jpg" alt="Book Image" />
+              <h3>Book Title 16</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$15</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book18.jpg" alt="Book Image" />
+              <h3>Book Title 17</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$20</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book19.jpeg" alt="Book Image" />
+              <h3>Book Title 18</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$25</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book20.jpeg" alt="Book Image" />
+              <h3>Book Title 19</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$10</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+            <div class="book-card">
+              <img src="images/book21.jpeg" alt="Book Image" />
+              <h3>Book Title 20</h3>
+              <p>An amazing book full of knowledge and adventure.</p>
+              <p class="price">$15</p>
+              <button class="reserve-btn">Reserve</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="books-page" data-page="3" >
+          <!-- Book 21 to 30 -->
+          <div class="book-card">
+            <img src="images/book22.jpeg" alt="Book Image" />
+            <h3>Book Title 21</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$10</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book.50.jpg" alt="Book Image" />
+            <h3>Book Title 22</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$15</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book23.jpeg" alt="Book Image" />
+            <h3>Book Title 23</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$20</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book24.jpeg" alt="Book Image" />
+            <h3>Book Title 24</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$25</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book25.jpeg" alt="Book Image" />
+            <h3>Book Title 25</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$10</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+
+          <div class="book-card">
+            <img src="images/upbook1.jpg" alt="Book Image" />
+            <h3>Book Title 26</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$15</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/upbook2.jpg" alt="Book Image" />
+            <h3>Book Title 27</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$20</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/upbook3.jpg" alt="Book Image" />
+            <h3>Book Title 28</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$25</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/upbook4.jpg" alt="Book Image" />
+            <h3>Book Title 29</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$10</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/upbook5.jpg" alt="Book Image" />
+            <h3>Book Title 30</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$15</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+        </div>
+
+        <!-- Page 4 -->
+        <div class="books-page" data-page="4" >
+          <!-- Book 31 to 40 -->
+          <div class="book-card">
+            <img src="images/1736773411-book2.jpg" alt="Book Image" />
+            <h3>Book Title 31</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$10</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book3.jpg" alt="Book Image" />
+            <h3>Book Title 32</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$15</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book4.jpg" alt="Book Image" />
+            <h3>Book Title 33</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$20</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book5.jpg" alt="Book Image" />
+            <h3>Book Title 34</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$25</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book1.jpg" alt="Book Image" />
+            <h3>Book Title 35</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$10</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+
+          <div class="book-card">
+            <img src="images/book6.png" alt="Book Image" />
+            <h3>Book Title 36</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$15</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book7.jpg" alt="Book Image" />
+            <h3>Book Title 37</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$20</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book8.jpg" alt="Book Image" />
+            <h3>Book Title 38</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$25</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book9.jpg" alt="Book Image" />
+            <h3>Book Title 39</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$10</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+          <div class="book-card">
+            <img src="images/book10.jpg" alt="Book Image" />
+            <h3>Book Title 40</h3>
+            <p>An amazing book full of knowledge and adventure.</p>
+            <p class="price">$15</p>
+            <button class="reserve-btn">Reserve</button>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="page-btn" data-page="1">1</button>
+          <button class="page-btn" data-page="2">2</button>
+          <button class="page-btn" data-page="3">3</button>
+          <button class="page-btn" data-page="4">4</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BOOKS JS ===== -->
+    <script>
+      const pages = document.querySelectorAll(".books-page");
+      const pageButtons = document.querySelectorAll(".page-btn");
+
+      pageButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const page = btn.getAttribute("data-page");
+
+          // Hide all pages
+          pages.forEach((p) => (p.style.display = "none"));
+
+          // Show selected page
+          document.querySelector(
+            `.books-page[data-page='${page}']`
+          ).style.display = "grid";
+
+          // Highlight active button
+          pageButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+
+      // Initialize first page
+      pages.forEach((p) => (p.style.display = "none"));
+      document.querySelector(`.books-page[data-page='1']`).style.display =
+        "grid";
+      pageButtons.forEach((b) => b.classList.remove("active"));
+      pageButtons[0].classList.add("active");
+    </script>
+
+    <footer id="contact">
+      <div class="footer-container">
+        <h3>BookVerse</h3>
+        <p>Your gateway to unlimited stories.</p>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#facts">Facts</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+
+        <p class="copy">© 2025 BookVerse. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      document
+        .querySelector(".dropdown-btn")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const menu = this.nextElementSibling;
+
+          // Toggle show/hide
+          menu.style.display =
+            menu.style.display === "block" ? "none" : "block";
+        });
+    </script>
+    <script src="js/book.js"></script>
+  </body>
 </html>
